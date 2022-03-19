@@ -1,6 +1,14 @@
 
 function burl() {
   local url="$1"
+  if [[ "$url" == '' || "$rl" == '-h' ]]; then
+    cat <<EOF
+Usage:
+  burl <URL> [...other args of curl]
+EOF
+    return 0
+  fi
+
   shift
   curl "$url"\
   -H 'Connection: keep-alive'\
