@@ -11,6 +11,7 @@ EOF
 
   shift
   curl "$url"\
+  --compressed \
   -H 'Connection: keep-alive'\
   -H 'sec-ch-ua: " Not A;Brand";v="99", "Chromium";v="98", "Google Chrome";v="98"'\
   -H 'sec-ch-ua-mobile: ?0'\
